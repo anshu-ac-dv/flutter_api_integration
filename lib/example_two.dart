@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:api_integration/models/Photos.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
@@ -63,10 +64,4 @@ class _ExampleTwoState extends State<ExampleTwo> {
       ),
     );
   }
-}
-
-class Photos {
-  String title, url;
-  int id;
-  Photos({required this.title, required this.url, required this.id});
 }
