@@ -1,3 +1,4 @@
+import 'package:api_integration/example_two.dart';
 import 'package:api_integration/home_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +17,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const HomeScreen(),
+      //home: const HomeScreen(),
+      home: ExampleTwo(),
     );
   }
 }

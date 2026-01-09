@@ -48,10 +48,21 @@ class _HomeScreenState extends State<HomeScreen> {
                       return Text(postList[index].body.toString());
                     },
                   );
-
                 }
                 else {
-                  return Text("Loading....");
+                  return Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Center(
+                        child: CircularProgressIndicator(
+                          strokeWidth: 5,
+                          backgroundColor: Colors.blue.shade900,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  );
                 }
               },
             ),
