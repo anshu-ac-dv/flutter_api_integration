@@ -39,16 +39,23 @@ class _ExapmleFourState extends State<ExapmleFour> {
                   return const Center(child: CircularProgressIndicator());
                 } else {
                   return ListView.builder(
+                    itemCount: data.length,
                     itemBuilder: (context, index) {
                       return Card(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(data[index]['name']),
-                            Text(data[index]['username']),
-                            Text(data[index]['email']),
-                          ],
+                        child: Padding(
+                          padding: const EdgeInsets.all(20.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(data[index]['name']),
+                              Text(data[index]['username']),
+                              Text(data[index]['email']),
+                              Text(data[index]['address']['city']),
+                              Text(data[index]['phone']),
+                              Text(data[index]['website']),
+                            ],
+                          ),
                         ),
                       );
                     },
