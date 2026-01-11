@@ -18,7 +18,9 @@ class _ExapmleFourState extends State<ExapmleFour> {
     );
     if (response.statusCode == 200) {
       data = jsonDecode(response.body.toString());
-    } else {}
+    } else {
+      print('Error');
+    }
   }
 
   @override
