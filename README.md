@@ -24,7 +24,7 @@
     return User(
     id: json['id'],
     name: json['name'],
-    );
+      );
     }
     }
 ```
