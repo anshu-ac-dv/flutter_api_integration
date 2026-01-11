@@ -12,7 +12,7 @@
 
 * Create a Data Model.
     * When you get data from an API, it usually arrives as a JSON object. A "Model" is just a simple Dart class that converts that messy JSON into an object your app can easily understand.
-    * ```dart
+```dart
     class User {
     final int id;
     final String name;
