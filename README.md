@@ -1,16 +1,30 @@
-# api_integration
+# API Integration in flutter.
 
-A new Flutter project.
+>* Adding API in our application for real time data change and for live updates.
+>* API is second main integration of our future flutter application.
 
-## Getting Started
+## How to implement API in flutter application?
 
-This project is a starting point for a Flutter application.
+* Add the "Http" Package.
+    * Open your pubspec.yaml file.
+    * Add http: ^1.1.0 (or the latest version) under dependencies.
+    * Run flutter pub get in your terminal.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+* Create a Data Model.
+    * When you get data from an API, it usually arrives as a JSON object. A "Model" is just a simple Dart class that converts that messy JSON into an object your app can easily understand.
+    * ```dart
+    class User {
+    final int id;
+    final String name;
+    
+    User({required this.id, required this.name});
+    
+    // This converts JSON into a User object
+    factory User.fromJson(Map<String, dynamic> json) {
+    return User(
+    id: json['id'],
+    name: json['name'],
+    );
+    }
+    }
+```
