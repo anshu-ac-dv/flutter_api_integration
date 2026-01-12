@@ -8,7 +8,7 @@
 * STEP-1 : Add the "Http" Package.
     * Open your pubspec.yaml file.
     * Add http: ^1.1.0 (or the latest version) under dependencies.
-    * Run flutter pub get in your terminal.
+    * Run flut;-ter pub get in your terminal.
 
 * STEP-2 : Create a Data Model.
     * When you get data from an API, it usually arrives as a JSON object. 
